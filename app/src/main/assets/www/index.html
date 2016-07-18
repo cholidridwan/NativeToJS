@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	
+	<body>
+		<form id="form">
+			<input id="inputTxt" type="text" name="input">
+			<input id="btn" type="submit" value="Submit">
+		</form>
+		<h1 id="outputTxt">output :)</h1>
+		<script>
+			function changeOutput(string){
+				document.getElementById("outputTxt").innerHTML = string;
+			}
+
+			function submitInput(){
+				var input = document.getElementById("inputTxt").value;
+				app.changeOutput(input);
+			}
+
+			var form = document.getElementById("form");
+            form.onsubmit = submitInput;
+		</script>
+	</body>
+
+</html>
